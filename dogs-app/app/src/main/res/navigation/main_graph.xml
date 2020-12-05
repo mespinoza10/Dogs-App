@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/nav_welcome_fragment">
+
+    <fragment
+        android:id="@+id/nav_welcome_fragment"
+        android:name="com.marin.dogapp.ui.fragment.BienvenidoFragment"
+        android:label="fragment_bienvenido"
+        tools:layout="@layout/fragment_bienvenido" >
+        <action
+            android:id="@+id/action_nav_welcome_fragment_to_nav_dog_fragment"
+            app:destination="@id/nav_dog_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_dog_fragment"
+        android:name="com.marin.dogapp.ui.fragment.DogsFragment"
+        android:label="fragment_dogs"
+        tools:layout="@layout/fragment_dogs" >
+        <action
+            android:id="@+id/action_nav_dog_fragment_to_detalleDogFragment"
+            app:destination="@id/nav_detalle_dog_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_detalle_dog_fragment"
+        android:name="com.marin.dogapp.ui.fragment.DetalleDogFragment"
+        android:label="Detalle Dog"
+        tools:layout="@layout/detalle_dog_fragment" />
+</navigation>
